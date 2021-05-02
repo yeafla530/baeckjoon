@@ -1,6 +1,6 @@
 for tc in range(int(input())):
     n,m = map(int, input().split())
-
+    # 아이디어 필요
     d = [[0]*31 for _ in range(31)]
 
     for i in range(1, n+1):

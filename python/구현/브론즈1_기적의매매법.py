@@ -18,8 +18,8 @@ bnp_result = (stocks[13] * bnp) + bnp_money
 
 down_count = 0 # 연속으로 내려간 날
 up_count = 0 # 연속으로 올라간날 
-before_stock = 0
-now_stock = 0
+before_stock = 0 # 현재 stock과 비교할 그 전날 stock
+now_stock = 0 # 현재 stock
 
 
 # timing
@@ -45,6 +45,7 @@ for i in range(1, len(stocks)):
             timing_money += timing * stocks[i] 
             timing = 0 
     
+    # 초기화
     if before_stock == now_stock:
         down_count = 0
         up_count = 0
